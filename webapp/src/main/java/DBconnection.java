@@ -36,10 +36,7 @@ public static Connection getConnection(){
         }  
           
         return status;  
-                   //calling pojo class
-                  
-              
-
+                   
  }
  public static List<Pojoevent> getAllEmployees(){  
         List<Pojoevent> list=new ArrayList<Pojoevent>();  
@@ -126,4 +123,124 @@ public static Connection getConnection(){
           
         return status;  
     }  
+  public static List<Pojoevent> paperpresentation(){  
+        List<Pojoevent> list=new ArrayList<Pojoevent>();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * from eventtable where topic='paperpresentation'");  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Pojoevent e=new Pojoevent();  
+                e.setId(rs.getString(1));  
+                e.setFname(rs.getString(2));  
+                e.setLname(rs.getString(3));  
+                e.setEmail(rs.getString(4));  
+                e.setDate(rs.getString(5));
+                e.setTime(rs.getString(6)); 
+                e.setTopic(rs.getString(7));
+                e.setLocation(rs.getString(8)); 
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){e.printStackTrace();}  
+          
+        return list;  
+    }  
+    public static List<Pojoevent> bugbluster(){  
+        List<Pojoevent> list=new ArrayList<Pojoevent>();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * from eventtable where topic='bugblaster'");  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Pojoevent e=new Pojoevent();  
+                e.setId(rs.getString(1));  
+                e.setFname(rs.getString(2));  
+                e.setLname(rs.getString(3));  
+                e.setEmail(rs.getString(4));  
+                e.setDate(rs.getString(5));
+                e.setTime(rs.getString(6)); 
+                e.setTopic(rs.getString(7));
+                e.setLocation(rs.getString(8)); 
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){e.printStackTrace();}  
+          
+        return list;  
+    }  
+   public static List<Pojoevent> treasure(){  
+        List<Pojoevent> list=new ArrayList<Pojoevent>();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * from eventtable where topic='treasurhunt'");  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Pojoevent e=new Pojoevent();  
+                e.setId(rs.getString(1));  
+                e.setFname(rs.getString(2));  
+                e.setLname(rs.getString(3));  
+                e.setEmail(rs.getString(4));  
+                e.setDate(rs.getString(5));
+                e.setTime(rs.getString(6)); 
+                e.setTopic(rs.getString(7));
+                e.setLocation(rs.getString(8)); 
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){e.printStackTrace();}  
+          
+        return list;  
+    }
+    public static List<Pojoevent> carving(){  
+        List<Pojoevent> list=new ArrayList<Pojoevent>();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * from eventtable where topic='vegetable carving'");  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Pojoevent e=new Pojoevent();  
+                e.setId(rs.getString(1));  
+                e.setFname(rs.getString(2));  
+                e.setLname(rs.getString(3));  
+                e.setEmail(rs.getString(4));  
+                e.setDate(rs.getString(5));
+                e.setTime(rs.getString(6)); 
+                e.setTopic(rs.getString(7));
+                e.setLocation(rs.getString(8)); 
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){e.printStackTrace();}  
+          
+        return list;  
+    }  
+    public static List<Pojoevent> band(){  
+        List<Pojoevent> list=new ArrayList<Pojoevent>();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * from eventtable where topic='music band'");  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Pojoevent e=new Pojoevent();  
+                e.setId(rs.getString(1));  
+                e.setFname(rs.getString(2));  
+                e.setLname(rs.getString(3));  
+                e.setEmail(rs.getString(4));  
+                e.setDate(rs.getString(5));
+                e.setTime(rs.getString(6)); 
+                e.setTopic(rs.getString(7));
+                e.setLocation(rs.getString(8)); 
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){e.printStackTrace();}  
+          
+        return list;  
+    }    
 }

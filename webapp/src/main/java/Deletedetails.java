@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Deletedetails extends HttpServlet {  
     protected void doGet(HttpServletRequest request, HttpServletResponse response)   
              throws ServletException, IOException {  
-        String sid=request.getParameter("id");  
-       // int id=Integer.parseInt(sid);  
+        String sid=request.getParameter("id");   
         DBconnection.delete(sid);  
         response.sendRedirect("Viewdetails");  
     }  

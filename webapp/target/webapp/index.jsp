@@ -1,8 +1,6 @@
 <%@ page import="java.sql.*" %>
 <html>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
   
     <style>
         table{
@@ -14,11 +12,12 @@
         h1
         {
             font: bold;
-            color:black;
+            color:white;
         }
        body {
-    
-    background-color: darkgray;
+    color:white;
+    background-color:mediumpurple;
+ background-image: url("http://media.istockphoto.com/photos/perfect-wood-planks-background-picture-id523584249?k=6&m=523584249&s=612x612&w=0&h=733mmrl5yJ3wMbiSFiTCRwDq5Mth-sUeDcRVAn8Qakw=");
    
 }
 
@@ -36,12 +35,21 @@
                 }
                 return false;
             }
-            </script>
+            
+
+function myFunction() {
+
+    var x = document.getElementById("content");
+    x.disabled = true;
+
+}
+</script>
+           
 
 <body  >
     <br><br>
 <center><h1>EVENT DETAILS</h1>
-<form  name="myform"method="POST" action="mainservlet">
+<form  name="myform"method="POST" action="mainservlet"  enctype="multipart/form-data">
  <table color="cornflowerblue">
       <tr>
      <td>  StudentID :</td>
@@ -75,17 +83,21 @@
          <td> Location:</td>
    <td><input type="text" name="location"></td>
    </tr>
+   <tr>
+       <td>
+   FILENAME:</td><td><input type="text" name="filename"></td></tr>
+   <tr><td>UPLOAD FILE:</td><td><input type="file" name="content"></td></tr>
    </table>
 <br>
 <br>
     <center>
-                <input type="submit" name="HelloWorld" value="Submit" > &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" name="HelloWorld" value="Submit" onclick="myFunction()"> &nbsp;&nbsp;&nbsp;&nbsp;
       
-                <input type="submit" name="update" value="Update" >&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" name="Delete" value="Delete"> &nbsp;&nbsp;&nbsp;&nbsp;
+                
                 
      
        </center>
+      
         
  </form>
 </body>
@@ -94,35 +106,5 @@
 
 
 
-<!--<html>
-    <head>
-        <title>admin page
-        </title>
-    </head>
-    <body>
-<center><b><h1></h1></b></center>
-<form action="mainservlet" method="post">
-<fieldset>
-    <label>USERNAME:</label> 
-    <label><input type="text" name="username"></label><br>
-    <label>PASSWORD:</label> 
-    <label><input type="password" name="password"></label><br>
-    <label><input type="submit" name="Submit" value="login">
-    </label>
-</fieldset> 
-</form>
- </body>
-</html>-->
-<!--<html>
-    <head>
-    </head><body>
-        <form action="main" method="post">
-        <fieldset>
-    <label>USERNAME:</label> 
-    <label><input type="text" name="email"></label><br>
-    
-    <label><input type="submit" name="Submit" value="login"></label>
-        </fieldset>
-        </form>
-        </body>
-</html>-->
+
+
